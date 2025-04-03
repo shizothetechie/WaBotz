@@ -3,7 +3,7 @@ import path from 'path';
 
 export async function checkSlang(text: string): Promise<boolean> {
     try {
-        const filePath = path.join(__dirname, 'data.json');
+        const filePath = path.join(__dirname, 'slang.json');
         const data = await fs.readFile(filePath, 'utf-8');
         const { slangs }: { slangs: string[] } = JSON.parse(data);
 
